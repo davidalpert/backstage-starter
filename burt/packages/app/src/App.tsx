@@ -4,6 +4,8 @@ import {
   CatalogEntityPage,
   CatalogIndexPage,
   catalogPlugin,
+  CatalogTable,           // to customize Catalog Table columns
+  CatalogTableColumnsFunc // to customize Catalog Table columns
 } from '@backstage/plugin-catalog';
 import {
   CatalogImportPage,
@@ -62,10 +64,22 @@ const app = createApp({
   },
 });
 
+const myColumnsFunc: CatalogTableColumnsFunc = entityListContext => {
+  if (entityListContext.filters.kind?.value === 'contact') {
+    return [
+      CatalogTable.columns.createNameColumn(),
+      CatalogTable.columns.createMetadataDescriptionColumn(),
+      CatalogTable.columns.createTagsColumn(),
+    ];
+  }
+
+  return CatalogTable.defaultColumnsFunc(entityListContext);
+};
+
 const routes = (
   <FlatRoutes>
     <Route path="/" element={<Navigate to="catalog" />} />
-    <Route path="/catalog" element={<CatalogIndexPage />} />
+    <Route path="/catalog" element={<CatalogIndexPage columns={myColumnsFunc} />} />
     <Route
       path="/catalog/:namespace/:kind/:name"
       element={<CatalogEntityPage />}
