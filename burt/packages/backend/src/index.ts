@@ -63,5 +63,7 @@ backend.add(import('@backstage/plugin-kubernetes-backend'));
 backend.add(import('@backstage/plugin-notifications-backend'));
 backend.add(import('@backstage/plugin-signals-backend'));
 
-backend.add(import('@internal/plugin-crm-backend'));
+import { crmPlugin, crmCatalogModule } from '@internal/plugin-crm-backend';
+backend.add(crmPlugin);        // adds new plugin functionality
+backend.add(crmCatalogModule); // extends the Catalog plugin with custom Kinds
 backend.start();

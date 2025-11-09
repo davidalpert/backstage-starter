@@ -1,1 +1,1 @@
-export { crmPlugin as default } from './plugin';
+export { crmPlugin, crmCatalogModule } from './plugin';
