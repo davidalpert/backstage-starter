@@ -68,7 +68,7 @@ const app = createApp({
 const myColumnsFunc: CatalogTableColumnsFunc = entityListContext => {
   if (entityListContext.filters.kind?.value === 'contact') {
     return [
-      CatalogTable.columns.createNameColumn(),
+      CatalogTable.columns.createNameColumn({ defaultKind: 'Contact' }),
       CatalogTable.columns.createMetadataDescriptionColumn(),
       CatalogTable.columns.createTagsColumn(),
     ];
