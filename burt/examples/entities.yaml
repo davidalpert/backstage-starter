@@ -39,3 +39,11 @@ spec:
     message ExampleMessage {
       string example = 1;
     };
+---
+apiVersion: crm.plugins.backstage.io/v1alpha1
+kind: Contact
+metadata:
+  name: malcolm-reynolds
+spec:
+  firstName: Malcolm
+  lastName: Reynolds
