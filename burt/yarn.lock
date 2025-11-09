@@ -5709,6 +5709,14 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@internal/plugin-crm-common@workspace:plugins/crm-common":
+  version: 0.0.0-use.local
+  resolution: "@internal/plugin-crm-common@workspace:plugins/crm-common"
+  dependencies:
+    "@backstage/cli": "npm:^0.34.4"
+  languageName: unknown
+  linkType: soft
+
 "@internationalized/date@npm:^3.10.0":
   version: 3.10.0
   resolution: "@internationalized/date@npm:3.10.0"
