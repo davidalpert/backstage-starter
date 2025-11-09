@@ -5713,6 +5713,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@internal/plugin-crm-common@workspace:plugins/crm-common"
   dependencies:
+    "@backstage/catalog-model": "npm:^1.7.5"
     "@backstage/cli": "npm:^0.34.4"
   languageName: unknown
   linkType: soft

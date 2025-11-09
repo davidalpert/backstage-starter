@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "ContactV1alpha1",
+  "description": "A Contact represents a person with contact information that you want to track in the CRM",
+  "examples": [
+    {
+      "apiVersion": "crm.plugins.backstage.io/v1alpha1",
+      "kind": "API",
+      "metadata": {
+        "name": "malcolm-reynolds",
+        "description": "Captain of the Serenity",
+        "labels": {
+          "product_name": "Random value Generator"
+        },
+        "annotations": {
+          "docs": "https://github.com/..../tree/develop/doc"
+        }
+      },
+      "spec": {}
+    }
+  ],
+  "allOf": [
+    {
+      "$ref": "Entity"
+    },
+    {
+      "type": "object",
+      "required": [
+        "spec"
+      ],
+      "properties": {
+        "apiVersion": {
+          "enum": [
+            "crm.plugins.backstage.io/v1alpha1"
+          ]
+        },
+        "kind": {
+          "enum": [
+            "Contact"
+          ]
+        },
+        "spec": {
+          "type": "object",
+          "required": [
+            "firstName"
+          ],
+          "properties": {
+            "firstName": {
+              "type": "string",
+              "description": "",
+              "examples": [
+                "Malcolm"
+              ],
+              "minLength": 1
+            },
+            "lastName": {
+              "type": "string",
+              "description": "",
+              "examples": [
+                "Reynolds"
+              ],
+              "minLength": 1
+            },
+            "phone": {
+              "type": "string",
+              "description": "",
+              "examples": [
+                "1-234-567-8901"
+              ],
+              "minLength": 1
+            },
+            "email": {
+              "type": "string",
+              "description": "",
+              "minLength": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}
