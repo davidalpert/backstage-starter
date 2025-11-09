@@ -251,6 +251,10 @@ I find it helpful during development to separate frontend and backend logs:
 
         - https://backstage.io/docs/features/software-catalog/catalog-customization/#initially-selected-kind
 
+        > [!WARNING]
+        > The value of `initialKind` needs to be title cased (e.g. `Contact`), not
+        > lower-cased like the column schema case statements.
+
     2. Customize the column schema
 
         - https://backstage.io/docs/features/software-catalog/catalog-customization/#adding-columns-to-a-custom-or-specific-kind

@@ -80,7 +80,7 @@ const myColumnsFunc: CatalogTableColumnsFunc = entityListContext => {
 const routes = (
   <FlatRoutes>
     <Route path="/" element={<Navigate to="catalog" />} />
-    <Route path="/catalog" element={<CatalogIndexPage columns={myColumnsFunc} initialKind='contact' />} />
+    <Route path="/catalog" element={<CatalogIndexPage columns={myColumnsFunc} initialKind='Contact' />} />
     <Route
       path="/catalog/:namespace/:kind/:name"
       element={<CatalogEntityPage />}
