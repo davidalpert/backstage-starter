@@ -1,5 +1,9 @@
 # Backstage-Starter
 
+- [First Steps](#first-steps)
+- [Local Development](#local-development)
+- [Extending the `Catalog` model with custom Entity Kinds](#extending-the-catalog-model-with-custom-entity-kinds)
+
 ## First Steps
 
 - Review and validate the Backstage [prerequisites](https://backstage.io/docs/getting-started/#prerequisites);
