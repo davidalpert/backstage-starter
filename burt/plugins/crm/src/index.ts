@@ -1,1 +1,1 @@
-export { crmPlugin, CrmPage } from './plugin';
+export { crmPlugin, CrmPage, ContactAboutCard } from './plugin';
